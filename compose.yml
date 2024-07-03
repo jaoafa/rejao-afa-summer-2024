@@ -1,0 +1,36 @@
+services:
+  minecraft:
+    image: itzg/minecraft-server:stable
+    ports:
+      - 25565:25565
+    environment:
+      EULA: TRUE
+      VERSION: 1.20.6
+      TYPE: PAPER
+      MEMORY: 4G
+      SPAWN_PROTECTION: 0
+      LEVEL: Summer2024
+      ENFORCE_WHITELIST: TRUE
+      RCON_CMDS_ON_CONNECT: |-
+        whitelist reload
+      REMOVE_OLD_MODS: TRUE
+      GENERIC_PACKS: https://github.com/jrbudda/Vivecraft_Spigot_Extensions/releases/download/120r1/Vivecraft_Spigot_Extensions.1.20.4r1.zip
+      PLUGINS_FILE: /extras/plugins.txt
+      WHITELIST_FILE: /extras/whitelist.json
+      OPS_FILE: /extras/ops.json
+      ICON: /extras/server-icon.png
+      OVERRIDE_WHITELIST: TRUE
+      OVERRIDE_OPS: TRUE
+      OVERRIDE_ICON: TRUE
+      MOTD: \u00a76\u00a7l\u00a7orejao afa\u00a7r - \u00a7fjao Minecraft Server\u00a7r - \u00a7fSummer 2024
+    volumes:
+      - ./minecraft:/data
+      - ./extras:/extras
+    tty: true
+    stdin_open: true
+    restart: unless-stopped
+  whitelist-me:
+    build: ./whitelist-me
+    command: node build/main.js
+    volumes:
+      - ./extras:/extras
