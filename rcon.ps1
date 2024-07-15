@@ -1,1 +1,1 @@
-docker exec minecraft rcon-cli $args
+docker compose exec minecraft rcon-cli $args

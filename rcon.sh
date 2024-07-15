@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker exec minecraft rcon-cli "$@"
+docker compose exec minecraft rcon-cli "$@"
