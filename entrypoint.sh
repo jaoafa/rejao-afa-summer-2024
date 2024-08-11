@@ -20,5 +20,10 @@ if [ ! -f "/plugins/${VIVECRAFT_FILENAME}.jar" ]; then
   mv -v /plugins/Vivecraft_Spigot_Extensions.jar "/plugins/${VIVECRAFT_FILENAME}.jar"
 fi
 
+cd /whitelist-me-receiver || exit
+nohup pnpm start &
+
+cd /
+
 # run
 /start
