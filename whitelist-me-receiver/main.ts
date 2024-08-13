@@ -2,7 +2,7 @@ import express from "express";
 import {spawn} from "child_process";
 
 const app = express();
-const port = 3020;
+const port = process.env.PORT || 3020;
 
 app.get("/:minecraftId", (req, res) => {
     const id = req.params["minecraftId"]

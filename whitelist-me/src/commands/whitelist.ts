@@ -23,8 +23,16 @@ export class Whitelist {
             return;
         }
 
-        // TODO: Add user to whitelist
+        const port = process.env.WHITELIST_ME_PORT || 3020;
 
-        await interaction.reply("");
+        const result = await fetch(`http://minecraft:${port}/${id}`);
+
+        const message = await result.text()
+
+        if (result.ok && message === "added") {
+            await interaction.reply(`:white_check_mark: \`${id}\` をホワイトリストに追加しました。`);
+        } else {
+            await interaction.reply(`:x: \`${id}\` をホワイトリストに追加できませんでした。`);
+        }
     }
 }
