@@ -14,17 +14,20 @@ services:
       ENFORCE_WHITELIST: TRUE
       RCON_CMDS_ON_CONNECT: |-
         whitelist reload
-#      WHITELIST_FILE: /extras/whitelist.json
-#      OPS_FILE: /extras/ops.json
-#      ICON: /extras/server-icon.png
+      #      WHITELIST_FILE: /extras/whitelist.json
+      #      OPS_FILE: /extras/ops.json
+      #      ICON: /extras/server-icon.png
       OVERRIDE_WHITELIST: TRUE
       OVERRIDE_OPS: TRUE
       OVERRIDE_ICON: TRUE
       MOTD: \u00a76\u00a7l\u00a7orejao afa\u00a7r - \u00a7fjao Minecraft Server\u00a7r - \u00a7fSummer 2024
+      VOTE_PATH: /votes/vote.csv
+      MONO_VOTE_PATH: /votes/vote_monocraft.csv
     volumes:
       - ./minecraft:/data
       - ./extras:/extras
       - ./plugins:/plugins
+      - ./votes:/votes
     tty: true
     stdin_open: true
     restart: unless-stopped

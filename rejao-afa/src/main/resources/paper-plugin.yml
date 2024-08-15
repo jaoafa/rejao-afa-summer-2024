@@ -1,0 +1,6 @@
+name: rejao-afa
+version: '1.0-SNAPSHOT'
+main: com.jaoafa.rejao_afa.Main
+api-version: '1.20'
+authors: [ jaoafa ]
+description: Fork of custom join/left message in MyMaid4 for Minecraft 1.20.x
