@@ -1,6 +1,7 @@
 package com.jaoafa.rejao_afa.events
 
-import com.jaoafa.rejao_afa.votes
+import com.jaoafa.rejao_afa.getVote
+import com.jaoafa.rejao_afa.getVoteCount
 import net.kyori.adventure.text.Component
 import net.kyori.adventure.text.format.NamedTextColor
 import org.bukkit.entity.Player
@@ -89,6 +90,8 @@ class EventJoinLeft : Listener {
     fun onJoin(event: PlayerJoinEvent) {
         val player = event.player
 
+        player.displayName(Component.text(player.name, NamedTextColor.YELLOW))
+
         event.joinMessage(player.getJoinMessage())
     }
 
@@ -130,8 +133,4 @@ class EventJoinLeft : Listener {
 
         return Component.text(message, NamedTextColor.YELLOW)
     }
-
-    private fun Player.getVote() = votes.find { name == it.id }
-
-    private fun Player.getVoteCount() = getVote()?.count ?: 0
 }

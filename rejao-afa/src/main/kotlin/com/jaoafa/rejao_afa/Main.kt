@@ -1,5 +1,6 @@
 package com.jaoafa.rejao_afa
 
+import com.jaoafa.rejao_afa.events.EventChat
 import com.jaoafa.rejao_afa.events.EventJoinLeft
 import org.bukkit.Bukkit
 import org.bukkit.plugin.java.JavaPlugin
@@ -51,7 +52,12 @@ class Main : JavaPlugin() {
             votes.add(voteData)
         }
 
-        Bukkit.getServer().pluginManager.registerEvents(EventJoinLeft(), this)
+        listOf(
+            EventJoinLeft(),
+            EventChat()
+        ).forEach {
+            Bukkit.getServer().pluginManager.registerEvents(it, this)
+        }
     }
 
     override fun onDisable() {
