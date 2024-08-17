@@ -6,7 +6,7 @@ services:
       - "3020:3020"
     environment:
       EULA: TRUE
-      VERSION: 1.20.6
+      VERSION: 1.20.2
       TYPE: PAPER
       MEMORY: 4G
       SPAWN_PROTECTION: 0
@@ -23,6 +23,11 @@ services:
       MOTD: \u00a76\u00a7l\u00a7orejao afa\u00a7r - \u00a7fjao Minecraft Server\u00a7r - \u00a7fSummer 2024
       VOTE_PATH: /votes/vote.csv
       MONO_VOTE_PATH: /votes/vote_monocraft.csv
+      SPIGET_RESOURCES: 12038,39965
+      DATAPACKS: |
+        https://cdn.modrinth.com/data/ElnjwLgg/versions/ckqyN9xK/TaC-v5.2.9.zip
+        https://cdn.modrinth.com/data/6zniMv5W/versions/qkESOuLk/doggycare-v1-2-2.zip
+      REMOVE_OLD_DATAPACKS: TRUE
     volumes:
       - ./minecraft:/data
       - ./extras:/extras
