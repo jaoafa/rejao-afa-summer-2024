@@ -1,0 +1,6 @@
+services:
+  build-rejao-afa:
+    build:
+      context: .
+    volumes:
+      - ./build/libs:/app/build/libs
