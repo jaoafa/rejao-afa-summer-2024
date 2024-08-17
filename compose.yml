@@ -12,11 +12,7 @@ services:
       SPAWN_PROTECTION: 0
       LEVEL: Summer2024
       ENFORCE_WHITELIST: TRUE
-      RCON_CMDS_ON_CONNECT: |-
-        whitelist reload
-      #      WHITELIST_FILE: /extras/whitelist.json
-      #      OPS_FILE: /extras/ops.json
-      #      ICON: /extras/server-icon.png
+      ICON: /extras/server-icon.png
       OVERRIDE_WHITELIST: TRUE
       OVERRIDE_OPS: TRUE
       OVERRIDE_ICON: TRUE
