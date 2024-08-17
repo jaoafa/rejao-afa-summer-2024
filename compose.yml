@@ -20,6 +20,8 @@ services:
       VOTE_PATH: /votes/vote.csv
       MONO_VOTE_PATH: /votes/vote_monocraft.csv
       SPIGET_RESOURCES: 12038,39965
+      PLUGINS: |
+        https://lol.scarsz.me/wGIxGP/DiscordSRV-Build-1.28.0.jar
       DATAPACKS: |
         https://cdn.modrinth.com/data/ElnjwLgg/versions/ckqyN9xK/TaC-v5.2.9.zip
         https://cdn.modrinth.com/data/6zniMv5W/versions/qkESOuLk/doggycare-v1-2-2.zip
