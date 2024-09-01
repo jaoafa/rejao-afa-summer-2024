@@ -19,7 +19,7 @@ services:
       MOTD: \u00a76\u00a7l\u00a7orejao afa\u00a7r - \u00a7fjao Minecraft Server\u00a7r - \u00a7fSummer 2024
       VOTE_PATH: /votes/vote.csv
       MONO_VOTE_PATH: /votes/vote_monocraft.csv
-      SPIGET_RESOURCES: 12038,39965
+      SPIGET_RESOURCES: 12038
       PLUGINS: |
         https://lol.scarsz.me/wGIxGP/DiscordSRV-Build-1.28.0.jar
       DATAPACKS: |
